@@ -1,6 +1,37 @@
 [gd_scene format=3 uid="uid://3erogswmru6e"]
 
 [ext_resource type="Script" uid="uid://vdcwonw33s5j" path="res://Scenes/Level/Level.cs" id="1_vbawi"]
+[ext_resource type="Texture2D" uid="uid://c6qm71g31u1jb" path="res://Assets/spritesheet.png" id="2_3hkb6"]
 
-[node name="Level" type="Node2D" unique_id=1946020975]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4dwx7"]
+texture = ExtResource("2_3hkb6")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_gtl01"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_4dwx7")
+
+[node name="Level" type="Node" unique_id=2109180939 node_paths=PackedStringArray("_tml")]
 script = ExtResource("1_vbawi")
+_tml = NodePath("Floor")
+
+[node name="Floor" type="TileMapLayer" parent="." unique_id=1877902000]
+tile_map_data = PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 4, 0, 0, 0, 0, 0, 5, 0, 4, 0, 0, 0, 4, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_gtl01")

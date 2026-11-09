@@ -1,15 +1,17 @@
 using Godot;
 using System;
 
-public partial class Level : Node2D
+public partial class Level : Node
 {
+	[Export] private TileMapLayer _tml;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-	}
+		GD.Print(_tml.GetUsedCells());
+		GD.Print(_tml.GetUsedRect());
+		GD.Print(_tml.GetUsedRect().GetCenter());
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
+		// _tml.SetCell()
+
 	}
 }

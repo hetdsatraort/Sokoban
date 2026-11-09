@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Sokoban"
 run/main_scene="uid://3erogswmru6e"
-config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
+config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
